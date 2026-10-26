@@ -1,0 +1,471 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Skilled Tec Training</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long scroll. Navy blueprint hero → light drafting-paper body → navy contact band. Bands span full width; content sits on a 1200px column. */
+:root{
+  --navy:#0f2a44; --navy-2:#163a5c; --blueprint:#1f6fb2; --scan:#4fd1e8; --signal:#f2762e; --on-signal:#0f2a44;
+  --bg:#f4f6f8; --raised:#ffffff; --soft:#eaf2fa; --line:#d5dde5; --ink:#0f2a44; --muted:#4a5d70;
+  --on-navy:#ffffff; --on-navy-muted:#a9bbcb; --grid:rgba(79,209,232,.10); --grid-major:rgba(79,209,232,.22);
+  --link:#1f6fb2; --on-link:#ffffff;
+  --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r-sm:2px; --r-md:4px; --r-lg:8px;
+  --col:1200px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#0b1e31; --navy-2:#12304d; --bg:#0e2235; --raised:#12304d; --soft:#16395a; --line:#244766; --ink:#eef3f7; --muted:#a9bbcb;
+  --link:#5aa5e6; --on-link:#0b1e31; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --navy:#0b1e31; --navy-2:#12304d; --bg:#0e2235; --raised:#12304d; --soft:#16395a; --line:#244766; --ink:#eef3f7; --muted:#a9bbcb;
+  --link:#5aa5e6; --on-link:#0b1e31; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--scan);outline-offset:3px}
+.wrap{max-width:var(--col);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font:500 12px/16px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.01em;line-height:.98;margin:0;text-wrap:balance}
+h2{font-size:clamp(36px,5vw,64px);font-weight:700}
+h3{font-size:clamp(24px,2.4vw,30px);font-weight:600;letter-spacing:.02em}
+p{margin:0}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/20px var(--f-body);letter-spacing:.02em;padding:13px 20px;border-radius:var(--r-md);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--scan);color:var(--navy)}
+.btn-ghost{color:var(--on-navy);border-color:rgba(255,255,255,.35);background:transparent}
+.btn-ghost:hover{border-color:var(--scan)}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:var(--on-navy);border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--on-navy);text-decoration:none}
+.brand svg{width:40px;height:34px;flex:none}
+.brand b{font:700 24px/1 var(--f-display);letter-spacing:.02em}
+.brand b span{color:var(--scan)}
+nav{display:flex;align-items:center;gap:28px}
+nav a.nl{color:var(--on-navy-muted);text-decoration:none;font:500 15px var(--f-body)}
+nav a.nl:hover{color:var(--on-navy)}
+.nav-cta{padding:9px 16px}
+@media (max-width:820px){nav a.nl{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .wrap{position:relative;padding-block:96px 88px;min-height:620px;display:flex;flex-direction:column;justify-content:center}
+.hero .eyebrow{color:var(--scan)}
+.hero h1{font-size:clamp(52px,8.4vw,118px);font-weight:700;margin-top:20px;max-width:9.5em}
+.hero h1 em{font-style:normal;color:var(--scan)}
+.hero .lead{font:500 clamp(18px,1.6vw,21px)/1.5 var(--f-body);color:var(--on-navy-muted);max-width:34em;margin-top:28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero-read{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:24px;font:500 11px/16px var(--f-mono);letter-spacing:.1em;color:var(--on-navy-muted);text-transform:uppercase}
+@media (max-width:820px){.hero-read{display:none}.hero .wrap{min-height:0;padding-block:72px}}
+
+/* marquee */
+.ticker{background:var(--blueprint);color:#fff;overflow:hidden;border-block:1px solid rgba(255,255,255,.15)}
+.track{display:flex;width:max-content;animation:roll 38s linear infinite}
+.track span{font:700 22px/1 var(--f-display);text-transform:uppercase;letter-spacing:.04em;padding:18px 0;white-space:nowrap;display:flex;align-items:center}
+.track span::after{content:"";width:8px;height:8px;background:var(--signal);margin:0 28px}
+@keyframes roll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.track{animation:none}}
+
+section{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:56px}
+.sec-head p.body{color:var(--muted);max-width:32em}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+
+/* intro */
+.intro p{font:500 clamp(24px,3vw,38px)/1.3 var(--f-body);max-width:24em;text-wrap:pretty}
+.intro p b{font-weight:600;color:var(--link)}
+.facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:40px}
+.facts div{font:500 13px/20px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts strong{display:block;font:700 34px/1 var(--f-display);color:var(--ink);letter-spacing:.01em}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:820px){.services{grid-template-columns:1fr}}
+.svc{background:var(--raised);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px;display:flex;flex-direction:column;gap:18px;position:relative}
+.svc .corner{position:absolute;top:18px;right:18px;width:22px;height:22px;border-top:3px solid var(--link);border-right:3px solid var(--link)}
+.svc p{color:var(--muted)}
+.svc ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.svc li{display:flex;gap:12px;align-items:baseline}
+.svc li::before{content:"";flex:none;width:7px;height:7px;background:var(--signal);transform:translateY(-2px)}
+
+/* process */
+.process{background:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding:28px 24px 8px 0;display:flex;flex-direction:column;gap:12px}
+.step .n{font:700 64px/1 var(--f-display);color:var(--link)}
+.step p{color:var(--muted);font-size:16px}
+.step .t{font:500 12px/16px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+
+/* modules slider */
+.slider-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.ctrl{display:flex;align-items:center;gap:16px}
+.count{font:500 14px var(--f-mono);letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--muted)}
+.count b{color:var(--ink);font-weight:500}
+.arrow{width:48px;height:48px;border-radius:var(--r-md);border:1px solid var(--line);background:var(--raised);color:var(--ink);font-size:20px;cursor:pointer;display:grid;place-items:center}
+.arrow:hover{border-color:var(--link);color:var(--link)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(560px,86%);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.mod{scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;background:var(--raised);border:1px solid var(--line)}
+.mod .screen{position:relative;aspect-ratio:16/9;max-width:100%;background-color:#0f2a44;background-image:radial-gradient(rgba(79,209,232,.28) 1px,transparent 1.3px);background-size:22px 22px;color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:flex-end}
+.mod .screen .code{position:absolute;top:24px;left:28px;font:500 11px/16px var(--f-mono);letter-spacing:.1em;color:#4fd1e8;text-transform:uppercase}
+.mod .screen .ex{position:absolute;top:22px;right:24px;font:500 11px/16px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;background:#f2762e;color:#0f2a44;padding:3px 8px;border-radius:var(--r-sm)}
+.mod .screen h3{font-size:clamp(28px,3.2vw,40px);color:#fff;max-width:11em}
+.mod .screen .fr{position:absolute;right:34px;top:50%;width:84px;height:84px;transform:translateY(-50%)}
+.mod .screen .fr i{position:absolute;width:20px;height:20px;border:0 solid #4fd1e8}
+.mod .meta{padding:20px 24px 24px;display:flex;flex-direction:column;gap:10px}
+.mod .meta p{color:var(--muted);font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font:500 11px/16px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--soft);color:var(--ink);padding:3px 8px;border-radius:var(--r-sm)}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+@media (max-width:820px){.why{grid-template-columns:1fr;gap:28px}}
+.why div{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:10px}
+.why p{color:var(--muted)}
+.why .k{font:500 12px/16px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--link)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+@media (max-width:820px){.about{grid-template-columns:1fr;gap:32px}}
+.about .card{background:var(--navy);color:var(--on-navy);border-radius:var(--r-lg);padding:36px;display:flex;flex-direction:column;gap:20px}
+.about .card .who{font:700 34px/1 var(--f-display);text-transform:uppercase}
+.about .card .role{font:500 12px/16px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--scan)}
+.about .card dl{margin:0;display:grid;gap:14px}
+.about .card dt{font:500 11px/16px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-navy-muted)}
+.about .card dd{margin:2px 0 0;font-size:16px}
+.about .text{display:flex;flex-direction:column;gap:20px;max-width:36em}
+.about .text p{color:var(--muted)}
+.about .text p.big{font:500 24px/1.4 var(--f-body);color:var(--ink)}
+
+/* contact */
+.contact{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden}
+.contact .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(44px,6.4vw,88px)}
+.contact h2 em{font-style:normal;color:var(--scan)}
+.contact .side p{color:var(--on-navy-muted);margin-top:24px;max-width:28em}
+.mail{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.mail code{font:500 16px var(--f-mono);color:var(--on-navy);user-select:all}
+.copy{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--scan);background:transparent;border:1px solid rgba(79,209,232,.5);border-radius:var(--r-sm);padding:6px 10px;cursor:pointer}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:32px}
+@media (max-width:520px){form{grid-template-columns:1fr;padding:22px}}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font:500 11px/16px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-navy-muted)}
+input,select,textarea{font:400 16px/1.4 var(--f-body);color:var(--on-navy);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-sm);padding:12px 14px;width:100%}
+select option{color:#0f2a44}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--scan);box-shadow:0 0 0 1px var(--scan)}
+.err{font-size:13px;color:#ffb48a;min-height:0}
+.send{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between}
+.note{font-size:14px;color:var(--on-navy-muted)}
+.done{grid-column:1/-1;border:1px solid var(--scan);border-radius:var(--r-sm);padding:14px 16px;color:var(--on-navy)}
+
+footer{background:var(--navy);color:var(--on-navy-muted);border-top:1px solid rgba(255,255,255,.1)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-block:28px;font:500 12px/18px var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+footer a{color:var(--on-navy-muted);text-decoration:none}
+footer a:hover{color:var(--on-navy)}
+</style>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Skilled Tec Training, home">
+      <svg viewBox="0 0 64 53.7" aria-hidden="true">
+        <path d="M63 26.85 L47.5 53.7 L16.5 53.7 L1 26.85 L16.5 0 L47.5 0 Z" fill="#1f6fb2"/>
+        <path fill="#4fd1e8" d="M16.5 11.35h9.5v4.5h-5v5h-4.5zM47.5 11.35h-9.5v4.5h5v5h4.5zM16.5 42.35h9.5v-4.5h-5v-5h-4.5zM47.5 42.35h-9.5v-4.5h5v-5h4.5z"/>
+        <path fill="#f2762e" d="M27.5 22.35h9v9h-9z"/>
+      </svg>
+      <b>SKILLED <span>TEC</span></b>
+    </a>
+    <nav aria-label="Main">
+      <a class="nl" href="#services">Services</a>
+      <a class="nl" href="#process">How it works</a>
+      <a class="nl" href="#modules">Modules</a>
+      <a class="nl" href="#about">About</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-block:0" aria-labelledby="hero-h">
+    <canvas id="bp" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <p class="eyebrow">VR and AR training · Automotive programs</p>
+      <h1 id="hero-h">Learn it in the headset. <em>Prove it in the shop.</em></h1>
+      <p class="lead">Skilled Tec Training builds custom virtual reality and augmented reality modules for trade schools and community colleges, so students get more practice on the job before they put a wrench on a real car.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#contact">Get in touch →</a>
+        <a class="btn btn-ghost" href="#modules">See sample modules</a>
+      </div>
+    </div>
+    <div class="hero-read" id="readout">Scanning · rotor assembly</div>
+  </section>
+
+  <div class="ticker" aria-label="Automotive topics we build training for">
+    <div class="track">
+      <span>Brakes</span><span>Suspension and steering</span><span>Electrical diagnostics</span><span>Engine performance</span><span>Heating and A/C</span><span>Hybrid and EV safety</span><span>Shop safety</span><span>Tire and wheel service</span>
+      <span aria-hidden="true">Brakes</span><span aria-hidden="true">Suspension and steering</span><span aria-hidden="true">Electrical diagnostics</span><span aria-hidden="true">Engine performance</span><span aria-hidden="true">Heating and A/C</span><span aria-hidden="true">Hybrid and EV safety</span><span aria-hidden="true">Shop safety</span><span aria-hidden="true">Tire and wheel service</span>
+    </div>
+  </div>
+
+  <section class="intro" aria-label="About Skilled Tec">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:24px">What we do</p>
+      <p>Every program has the same problem: <b>not enough lifts, not enough cars, not enough hours.</b> We build training that lets every student practice the job as many times as it takes, built around your curriculum, not ours.</p>
+      <div class="facts">
+        <div><strong>20+ yrs</strong>Instructional technology</div>
+        <div><strong>VR + AR</strong>Headset and on-the-car</div>
+        <div><strong>Custom</strong>Built to your program</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding-top:0" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Services</p><h2 id="svc-h" style="margin-top:14px">Two ways we work with programs</h2></div>
+        <p class="body">Most schools start with one module for one course, then grow from there. Some just need help figuring out where VR fits. Either way works.</p>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <span class="corner" aria-hidden="true"></span>
+          <p class="eyebrow">Build</p>
+          <h3>Custom VR and AR modules</h3>
+          <p>We build the training from your lesson plans and your shop's procedures, then test it with your instructors before it reaches students.</p>
+          <ul>
+            <li>VR practice for tasks that are costly, risky or hard to schedule</li>
+            <li>AR guides that put steps on top of a real vehicle</li>
+            <li>Progress you can tie back to your course outcomes</li>
+          </ul>
+        </article>
+        <article class="svc">
+          <span class="corner" aria-hidden="true"></span>
+          <p class="eyebrow">Advise</p>
+          <h3>Consulting</h3>
+          <p>Not sure where to start? We help you decide which skills are worth putting in a headset and which should stay in the bay.</p>
+          <ul>
+            <li>Program review: where VR and AR actually help</li>
+            <li>Headset, setup and classroom planning</li>
+            <li>Instructor training so it gets used</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="process" aria-labelledby="proc-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">How it works</p><h2 id="proc-h" style="margin-top:14px">From lesson plan to headset</h2></div>
+        <p class="body">Four steps. Your instructors stay involved the whole way, because they know the job and the students.</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step"><span class="n">01</span><span class="t">Scope</span><h3>Pick the task</h3><p>We sit down with your instructors and choose the skill that would benefit most from more practice.</p></li>
+        <li class="step"><span class="n">02</span><span class="t">Build</span><h3>Make the module</h3><p>We script it from your procedures, build it, and show you working drafts along the way.</p></li>
+        <li class="step"><span class="n">03</span><span class="t">Pilot</span><h3>Try it with a class</h3><p>Students run it, instructors give feedback, and we fix what doesn't match the real job.</p></li>
+        <li class="step"><span class="n">04</span><span class="t">Support</span><h3>Keep it running</h3><p>We help with setup, train your staff, and update the module when procedures change.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="modules" aria-labelledby="mod-h">
+    <div class="wrap">
+      <div class="slider-top">
+        <div><p class="eyebrow">Sample modules</p><h2 id="mod-h" style="margin-top:14px">What a module looks like</h2></div>
+        <div class="ctrl">
+          <span class="count" id="count" aria-live="polite"><b>01</b> / 04</span>
+          <button class="arrow" id="prev" aria-label="Previous module">←</button>
+          <button class="arrow" id="next" aria-label="Next module">→</button>
+        </div>
+      </div>
+      <div class="rail" id="rail" tabindex="0" aria-label="Sample modules, scroll sideways">
+        <article class="mod"><div class="screen"><span class="code">Module 04 · Brakes</span><span class="ex">Example</span><div class="fr" aria-hidden="true"><i style="top:0;left:0;border-top-width:3px;border-left-width:3px"></i><i style="top:0;right:0;border-top-width:3px;border-right-width:3px"></i><i style="bottom:0;left:0;border-bottom-width:3px;border-left-width:3px"></i><i style="bottom:0;right:0;border-bottom-width:3px;border-right-width:3px"></i></div><h3>Disc brake inspection</h3></div>
+          <div class="meta"><p>Find the wear, measure the rotor, and make the call: resurface, replace, or send it back out.</p><div class="tags"><span class="tag">VR</span><span class="tag">25 min</span><span class="tag">6 steps</span></div></div></article>
+        <article class="mod"><div class="screen"><span class="code">Module 07 · Electrical</span><span class="ex">Example</span><div class="fr" aria-hidden="true"><i style="top:0;left:0;border-top-width:3px;border-left-width:3px"></i><i style="top:0;right:0;border-top-width:3px;border-right-width:3px"></i><i style="bottom:0;left:0;border-bottom-width:3px;border-left-width:3px"></i><i style="bottom:0;right:0;border-bottom-width:3px;border-right-width:3px"></i></div><h3>Parasitic draw diagnosis</h3></div>
+          <div class="meta"><p>Hook up the meter, pull fuses one at a time, and track down what's killing the battery overnight.</p><div class="tags"><span class="tag">VR</span><span class="tag">30 min</span><span class="tag">8 steps</span></div></div></article>
+        <article class="mod"><div class="screen"><span class="code">Module 11 · Safety</span><span class="ex">Example</span><div class="fr" aria-hidden="true"><i style="top:0;left:0;border-top-width:3px;border-left-width:3px"></i><i style="top:0;right:0;border-top-width:3px;border-right-width:3px"></i><i style="bottom:0;left:0;border-bottom-width:3px;border-left-width:3px"></i><i style="bottom:0;right:0;border-bottom-width:3px;border-right-width:3px"></i></div><h3>Lifting a vehicle safely</h3></div>
+          <div class="meta"><p>Find the lift points, set the arms, and check the load before anyone walks under the car.</p><div class="tags"><span class="tag">VR</span><span class="tag">15 min</span><span class="tag">5 steps</span></div></div></article>
+        <article class="mod"><div class="screen"><span class="code">Module 15 · Hybrid and EV</span><span class="ex">Example</span><div class="fr" aria-hidden="true"><i style="top:0;left:0;border-top-width:3px;border-left-width:3px"></i><i style="top:0;right:0;border-top-width:3px;border-right-width:3px"></i><i style="bottom:0;left:0;border-bottom-width:3px;border-left-width:3px"></i><i style="bottom:0;right:0;border-bottom-width:3px;border-right-width:3px"></i></div><h3>High-voltage disable</h3></div>
+          <div class="meta"><p>An AR guide that walks students through the shutdown sequence on a training vehicle, one step at a time.</p><div class="tags"><span class="tag">AR</span><span class="tag">20 min</span><span class="tag">7 steps</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0" aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Why programs use it</p><h2 id="why-h" style="margin-top:14px">More reps. Less risk.</h2></div>
+      </div>
+      <div class="why">
+        <div><span class="k">Practice time</span><h3>Every student gets a turn</h3><p>No waiting for an open lift. Students can repeat a task until they have it down, then do it for real.</p></div>
+        <div><span class="k">Cost and wear</span><h3>Save the training cars</h3><p>Mistakes happen in the headset first, so fewer parts get broken and fewer cars get torn up.</p></div>
+        <div><span class="k">Fit</span><h3>Built for your course</h3><p>Modules follow your procedures and your terms, so they back up what instructors already teach.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="process" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div class="card">
+        <p class="role">Founder · CEO</p>
+        <p class="who">Shannon Tucker</p>
+        <dl>
+          <div><dt>Background</dt><dd>20+ years in multimedia production and instructional technology</dd></div>
+          <div><dt>XR work</dt><dd>AR and VR training content for manufacturing</dd></div>
+          <div><dt>Education</dt><dd>MA, Instructional Technology · BS, Information Systems</dd></div>
+        </dl>
+      </div>
+      <div class="text">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h">Built by someone who teaches with technology</h2>
+        <p class="big">Skilled Tec started from a simple idea: the trades deserve training tools as good as the ones anywhere else.</p>
+        <p>Shannon Tucker has spent more than twenty years making learning media, and has built AR and VR content for manufacturing. Skilled Tec brings that experience to automotive programs, working side by side with the instructors who know the job best.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="side">
+        <p class="eyebrow" style="color:var(--scan)">Get in touch</p>
+        <h2 id="contact-h" style="margin-top:16px">Got a program in mind? <em>Let's talk.</em></h2>
+        <p>Tell us about your program, the course you're thinking about, and what's hard to teach right now. We'll write back.</p>
+        <div class="mail"><code id="addr">hello@yourdomain.com</code><button class="copy" id="copy" type="button">Copy</button></div>
+      </div>
+      <form id="form" novalidate>
+        <div class="f"><label for="name">Name</label><input id="name" name="name" autocomplete="name" placeholder="Jordan Lee"><span class="err" id="e-name"></span></div>
+        <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="jlee@college.edu"><span class="err" id="e-email"></span></div>
+        <div class="f"><label for="school">School or program</label><input id="school" name="school" placeholder="Automotive Technology program"></div>
+        <div class="f"><label for="interest">Interested in</label><select id="interest" name="interest"><option>Custom modules</option><option>Consulting</option><option>Both</option><option>Not sure yet</option></select></div>
+        <div class="f full"><label for="msg">What would you like to train?</label><textarea id="msg" name="msg" placeholder="We'd like our second-year students to get more brake and electrical diagnosis practice before shop rotations."></textarea><span class="err" id="e-msg"></span></div>
+        <div class="send"><span class="note">Preview only: this form isn't connected yet.</span><button class="btn btn-primary" type="submit">Send message</button></div>
+        <div class="done" id="done" hidden>Got it. On the live site this would go to your inbox. Connect the form before launch.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Skilled Tec Training LLC</span>
+    <span><a href="#services">Services</a> · <a href="#modules">Modules</a> · <a href="#about">About</a> · <a href="#contact">Contact</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---------- blueprint hero ---------- */
+  const cv=document.getElementById('bp'), ctx=cv.getContext('2d'), read=document.getElementById('readout');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W=0,H=0,dpr=1, cx=0, cy=0, R=0;
+  function size(){
+    const r=cv.getBoundingClientRect(); dpr=Math.min(2,window.devicePixelRatio||1);
+    W=r.width; H=r.height; cv.width=W*dpr; cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const wide=W>820;
+    R=wide?Math.min(H*0.36,230):Math.min(W*0.42,170);
+    cx=wide?W-Math.max(R+80,W*0.22):W*0.78; cy=wide?H*0.5:H*0.28;
+  }
+  const C={scan:'#4fd1e8',signal:'#f2762e'};
+  const targets=[
+    {a:0,d:0,s:0.55,label:'Rotor · Ø 280 mm'},
+    {a:-0.95,d:0.58,s:0.16,label:'Lug hole · 1 of 5'},
+    {a:0.35,d:0.93,s:0.22,label:'Min thickness · 26.0 mm'},
+    {a:2.2,d:0.78,s:0.2,label:'Runout · 0.05 mm max'}
+  ];
+  function tp(t){return {x:cx+Math.cos(t.a)*t.d*R, y:cy+Math.sin(t.a)*t.d*R, s:t.s*R*2};}
+  function grid(){
+    ctx.lineWidth=1;
+    for(let x=0;x<W;x+=24){ctx.strokeStyle=(Math.round(x/24)%5===0)?'rgba(79,209,232,.16)':'rgba(79,209,232,.06)';ctx.beginPath();ctx.moveTo(x+.5,0);ctx.lineTo(x+.5,H);ctx.stroke();}
+    for(let y=0;y<H;y+=24){ctx.strokeStyle=(Math.round(y/24)%5===0)?'rgba(79,209,232,.16)':'rgba(79,209,232,.06)';ctx.beginPath();ctx.moveTo(0,y+.5);ctx.lineTo(W,y+.5);ctx.stroke();}
+  }
+  function drawing(rot){
+    ctx.save(); ctx.translate(cx,cy); ctx.strokeStyle='rgba(169,213,240,.55)'; ctx.lineWidth=1.25;
+    [1,0.88,0.42,0.3].forEach(k=>{ctx.beginPath();ctx.arc(0,0,R*k,0,Math.PI*2);ctx.stroke();});
+    ctx.setLineDash([6,5]); ctx.beginPath();ctx.arc(0,0,R*0.65,0,Math.PI*2);ctx.stroke(); ctx.setLineDash([]);
+    for(let i=0;i<5;i++){const a=rot+i*Math.PI*2/5-0.95; ctx.beginPath(); ctx.arc(Math.cos(a)*R*0.58,Math.sin(a)*R*0.58,R*0.06,0,Math.PI*2); ctx.stroke();}
+    for(let i=0;i<36;i++){const a=rot*0.5+i*Math.PI/18; ctx.beginPath(); ctx.moveTo(Math.cos(a)*R*0.9,Math.sin(a)*R*0.9); ctx.lineTo(Math.cos(a)*R*0.98,Math.sin(a)*R*0.98); ctx.stroke();}
+    // center lines + dimension line
+    ctx.strokeStyle='rgba(79,209,232,.35)'; ctx.setLineDash([14,4,3,4]);
+    ctx.beginPath(); ctx.moveTo(-R*1.2,0); ctx.lineTo(R*1.2,0); ctx.moveTo(0,-R*1.2); ctx.lineTo(0,R*1.2); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle='rgba(169,213,240,.5)'; const dy=R*1.16;
+    ctx.beginPath(); ctx.moveTo(-R,dy); ctx.lineTo(R,dy); ctx.moveTo(-R,dy-6); ctx.lineTo(-R,dy+6); ctx.moveTo(R,dy-6); ctx.lineTo(R,dy+6); ctx.stroke();
+    ctx.fillStyle='rgba(169,213,240,.8)'; ctx.font='500 11px "IBM Plex Mono", monospace'; ctx.textAlign='center'; ctx.fillText('Ø 280.0',0,dy-8);
+    ctx.restore();
+  }
+  function frame(x,y,s,lock,t){
+    const arm=Math.max(10,s*0.28), w=3;
+    ctx.strokeStyle=C.scan; ctx.lineWidth=w; ctx.lineCap='square';
+    const h=s/2;
+    [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([sx,sy])=>{
+      const px=x+sx*h, py=y+sy*h; ctx.beginPath(); ctx.moveTo(px,py-sy*-arm*-1*0+0);
+      ctx.moveTo(px-sx*arm,py); ctx.lineTo(px,py); ctx.lineTo(px,py-sy*arm); ctx.stroke();
+    });
+    const ds=Math.max(6,s*0.09);
+    ctx.globalAlpha=lock?(0.65+0.35*Math.sin(t*0.008)):0.35; ctx.fillStyle=C.signal; ctx.fillRect(x-ds/2,y-ds/2,ds,ds); ctx.globalAlpha=1;
+    if(lock>0.5){
+      ctx.font='500 11px "IBM Plex Mono", monospace'; ctx.textAlign='left'; ctx.fillStyle=C.scan;
+      const lab=targets[idx].label.toUpperCase(); const lx=Math.min(x+h+10,W-ctx.measureText(lab).width-16);
+      ctx.fillText('● LOCKED',lx,y-h+10); ctx.fillStyle='rgba(255,255,255,.85)'; ctx.fillText(lab,lx,y-h+26);
+    }
+  }
+  let idx=0, from=null, start=0, last=-1;
+  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  function render(now){
+    ctx.clearRect(0,0,W,H); grid();
+    const rot=reduce?0:now*0.00004; drawing(rot);
+    const MOVE=1400, HOLD=2400, cyc=MOVE+HOLD;
+    if(reduce){const p=tp(targets[0]); frame(p.x,p.y,p.s,1,0); return;}
+    const k=Math.floor(now/cyc), ph=now%cyc;
+    if(k!==last){ last=k; from=tp(targets[idx]); idx=(idx+1)%targets.length; read.textContent='Scanning · '+targets[idx].label; }
+    const to=tp(targets[idx]); const m=Math.min(1,ph/MOVE), e=ease(m);
+    const pulse=m<1?1.18-0.18*e:1;
+    const x=from.x+(to.x-from.x)*e, y=from.y+(to.y-from.y)*e, s=(from.s+(to.s-from.s)*e)*pulse;
+    frame(x,y,s,m>=1?1:0,now);
+    requestAnimationFrame(render);
+  }
+  size(); addEventListener('resize',()=>{size(); if(reduce) render(0);});
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>{ if(reduce) render(0); });}
+  reduce?render(0):requestAnimationFrame(render);
+
+  /* ---------- module slider ---------- */
+  const rail=document.getElementById('rail'), count=document.getElementById('count'), cards=[...rail.children];
+  const n=cards.length, pad=v=>String(v).padStart(2,'0');
+  function current(){let best=0,bd=1e9; cards.forEach((c,i)=>{const d=Math.abs(c.offsetLeft-rail.offsetLeft-rail.scrollLeft); if(d<bd){bd=d;best=i;}}); return best;}
+  function go(i){i=(i+n)%n; rail.scrollTo({left:cards[i].offsetLeft-rail.offsetLeft,behavior:reduce?'auto':'smooth'});}
+  rail.addEventListener('scroll',()=>{count.innerHTML='<b>'+pad(current()+1)+'</b> / '+pad(n);},{passive:true});
+  document.getElementById('prev').onclick=()=>go(current()-1);
+  document.getElementById('next').onclick=()=>go(current()+1);
+
+  /* ---------- copy address ---------- */
+  const copyBtn=document.getElementById('copy'), addr=document.getElementById('addr');
+  copyBtn.addEventListener('click',()=>{
+    const done=()=>{copyBtn.textContent='Copied'; setTimeout(()=>copyBtn.textContent='Copy',1600);};
+    const sel=()=>{const r=document.createRange(); r.selectNodeContents(addr); const s=getSelection(); s.removeAllRanges(); s.addRange(r); copyBtn.textContent='Selected';};
+    try{navigator.clipboard.writeText(addr.textContent).then(done,sel);}catch(e){sel();}
+  });
+
+  /* ---------- form (preview) ---------- */
+  const form=document.getElementById('form');
+  const rules={name:v=>v.trim()?'':'Enter your name.',email:v=>/^\S+@\S+\.\S+$/.test(v)?'':'Enter an email we can reply to.',msg:v=>v.trim()?'':'Tell us a little about what you want to train.'};
+  Object.keys(rules).forEach(k=>document.getElementById(k).addEventListener('input',()=>{document.getElementById('e-'+k).textContent='';}));
+  form.addEventListener('submit',e=>{
+    e.preventDefault(); let ok=true;
+    for(const k in rules){const m=rules[k](document.getElementById(k).value); document.getElementById('e-'+k).textContent=m; if(m&&ok){ok=false; document.getElementById(k).focus();}}
+    document.getElementById('done').hidden=!ok;
+  });
+})();
+</script>
+
+</body></html>
